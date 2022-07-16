@@ -12,10 +12,18 @@ function getNasa(e) {
     let today = new Date();
     let date = `${today.getFullYear()}-${today.getMonth()}-${today.getDay()}`
 
+        let url = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${date}&${key}`
 
-    let url = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${date}&${key}`
 
-    fetch(url)
+        if (!document.querySelector('img')) {
+            const img = document.createElement('img')
+            img.classList.add('mars')
+            document.querySelector('.container').appendChild(img)
+        }
+
+        
+
+        fetch(url)
         .then(res => res.json())
         .then(data => {
             let shots = data.photos;
@@ -26,9 +34,14 @@ function getNasa(e) {
 
             function changeImage(){
                 count < shots.length - 1? count ++: count = 0;
-                console.info(shots[count])
-                document.querySelector("img").setAttribute("src", shots[count].img_src)
+                document.querySelector('img').setAttribute("src", shots[count].img_src)
             }
         })
         .catch(err => alert('Beep, boop. Something went wrong zzz...'))
+    
+    
+
+
+
+    
 } 
