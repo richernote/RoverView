@@ -1,6 +1,3 @@
-import { nasaKey } from "./key.js";
-
-const key = nasaKey();
 const input = document.querySelector(".form-input");
 const button = document.querySelector(".form-submit")
 
@@ -12,7 +9,6 @@ function getNasa(e) {
     let today = new Date();
     let date = `${today.getFullYear()}-${today.getMonth()}-${today.getDay()}`
 
-        let url = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=${date}&${key}`
 
 
         if (!document.querySelector('img')) {
@@ -23,7 +19,7 @@ function getNasa(e) {
 
         
 
-        fetch(url)
+        fetch('/.netlify/functions/nasaKey')
         .then(res => res.json())
         .then(data => {
             let shots = data.photos;
