@@ -19,7 +19,7 @@ function getNasa(e) {
 
         
 
-        fetch('/.netlify/functions/nasaKey')
+        fetch('/.netlify/functions/nasaAPI')
         .then(res => res.json())
         .then(data => {
             let shots = data.photos;

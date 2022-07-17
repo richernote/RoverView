@@ -13,6 +13,7 @@ const handler = async function (event) {
 
   const { NASA_KEY } = process.env
   console.log(NASA_KEY)
+  
   let someday = new Date();
   let date = `${someday.getFullYear()}-${someday.getMonth()}-${someday.getDay()}`
 
