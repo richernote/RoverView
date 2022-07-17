@@ -7,6 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Richard Nolet",
-  "license": "ISC"
-
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "qs": "^6.11.0"
+  }
 }
