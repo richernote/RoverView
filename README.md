@@ -1,5 +1,5 @@
-# My Awesome Project
-Write a short sentence or two about this project and what it does. Be sure to include a link and a screenshot (we're front end devs so we can actually see our work!).
+# Rover View
+Rover view is a web app made using NASA's Rover API. The poor stylistic choices are based on the old Canadian kids TV channel YTV's the Zone
 
 **Link to project:** [https://roverview.netlify.app/]
 
